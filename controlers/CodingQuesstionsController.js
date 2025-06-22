@@ -14,7 +14,7 @@ try {
         {
           parts: [
             {
-              text: `Generate exactly 1 coding questions covering the topics: Binary Search, Sliding Window, Dynamic Programming, and Greedy Algorithms.
+              text: `Generate exactly 10 coding questions covering the topics: Binary Search, Sliding Window, Dynamic Programming, and Greedy Algorithms.
 
 Each question must follow the **exact** format below:
 

@@ -1,7 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const { generateQuestion } = require('../controlers/geminicontroller');
-
+const { generateCodingQuestion } = require('../controlers/CodingQuesstionsController.js');
+router.post('/generatecodingquestion', generateCodingQuestion);
 router.post('/generate-question', generateQuestion);
 
 module.exports = router;

@@ -3,10 +3,10 @@ const axios = require('axios');
 const GEMINI_API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${process.env.GEMINI_API_KEY}`;
 
 console.log(GEMINI_API_URL)
-exports.generateQuestion = async (req, res) => {
-  const {topic } = req.body;
-  console.log(topic)
-  if (!topic) return res.status(400).json({ error: 'Topic is required' });
+exports.generateCodingQuestion = async (req, res) => {
+  const { Q } = req.body;
+//   console.log(topic)
+//   if ( !Q) return res.status(400).json({ error: 'Topic is required' });
 
   try {
     const response = await axios.post(GEMINI_API_URL, {
@@ -14,16 +14,14 @@ exports.generateQuestion = async (req, res) => {
         {
           parts: [
             {
-              text: ` Generate 10  multiple choice questions on the topic "${topic}" Given.
+              text: ` Generate thr coding 10 Questions on BinarySeach, Sliding Window, DP,greedy".
               Each question should follow exactly this format:
               Format:
               Q: <question text>
-              0) <option A>
-              1) <option B>
-              2) <option C>
-              3) <option D>
-              Correct answer index: <number from 0 to 3>
-              return all 15 questions in this format
+              0) <input1>
+              1) <output1>
+              2) <input2>
+              3) <output2>
               Separate each question by two newlines.`
             }
           ]

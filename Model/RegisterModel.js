@@ -2,13 +2,13 @@ const express = require('express');
 const mongoose = require('mongoose');
 
 const RegisterData = new mongoose.Schema({
-    FullName : {
+    fullName : {
         type : String
     },
-    Email : {
+    email : {
         type : String
     },
-    Password : {
+    password : {
         type : String
     }
 })

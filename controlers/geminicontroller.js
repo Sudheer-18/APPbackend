@@ -13,7 +13,14 @@ exports.generateQuestion = async (req, res) => {
         {
           parts: [
             {
-              text: `Generate a random, creative question about: "${topic}"`
+              text: `Generate one multiple choice question on the topic "${topic}".
+Format:
+Q: <question text>
+0) <option A>
+1) <option B>
+2) <option C>
+3) <option D>
+Correct answer index: <number from 0 to 3>`
             }
           ]
         }

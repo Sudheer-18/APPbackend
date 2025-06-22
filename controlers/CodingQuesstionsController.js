@@ -14,7 +14,7 @@ try {
         {
           parts: [
             {
-              text: `Generate exactly 10 coding questions covering the topics: Binary Search, Sliding Window, Dynamic Programming, and Greedy Algorithms.
+              text: `Generate exactly 1 coding questions covering the topics: Binary Search, Sliding Window, Dynamic Programming, and Greedy Algorithms.
 
 Each question must follow the **exact** format below:
 
@@ -26,13 +26,10 @@ Q: <question text>
    <output2>
 3) Solutions:
    - Brute Force:
-     <brute force code here>
+     <brute force code here in cpp,python ,java>
 
    - Optimized Solution 1:
-     <optimized code 1 here>
-
-   - Optimized Solution 2:
-     <optimized code 2 here>
+     <optimized code 1 here in cpp ,java,python>
 
 Ensure:
 - Each question is clearly labeled starting with "Q:"

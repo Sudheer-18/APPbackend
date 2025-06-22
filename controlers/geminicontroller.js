@@ -26,6 +26,7 @@ exports.generateQuestion = async (req, res) => {
           ]
         }
       ]
+      
     });
 
     const question = response.data?.candidates?.[0]?.content?.parts?.[0]?.text;

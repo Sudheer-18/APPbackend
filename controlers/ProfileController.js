@@ -15,4 +15,16 @@ const ProfileData = (req,res) => {
 }
 
 
+const getprofiledata = async(req,res) => {
+     try {
+      const users = await mydb.find(req.body); 
+      console.log(users); 
+      res.json(users);   
+    } catch (err) {
+      console.log(err);
+      res.status(500).json({ message: err.message });
+    }
+  };
+
+exports.getprofiledata = getprofiledata;
 exports.ProfileData = ProfileData;

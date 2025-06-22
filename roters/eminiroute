@@ -9,5 +9,5 @@ router.post('/generatecodingquestion', generateCodingQuestion);
 router.post('/generate-question', generateQuestion);
 router.post('/registerdata',RegisterData.RegisterData);
 router.post('/profiledata',ProfileData.ProfileData)
-
+router.get('/getprofiledata',ProfileData.getprofiledata)
 module.exports = router;

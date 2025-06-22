@@ -1,3 +1,4 @@
+require('dotenv').config(); 
 
 var createError = require('http-errors');
 var express = require('express');
@@ -5,10 +6,14 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 // const Routes = require("./roters/router2")
+const roters = require("./roters/eminiroute")
 const cors= require("cors")
 const bodypasrer = require("body-parser")
 const mongoose = require("mongoose")
 const nodemailer = require("nodemailer");
+
+
+console.log(process.env.GEMINI_API_KEY)
 
 
 var app = express();
@@ -30,7 +35,7 @@ const handlePort = () =>{
 app.use(cors())  
 app.use(bodypasrer.json());
 
-// app.use("/",Routes);
+app.use("/api",roters);
 
 
 // app.get("/testing",function(req,res){

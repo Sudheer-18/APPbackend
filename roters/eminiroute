@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { generateQuestion } = require('../Controller/GeminiController');
+const { generateQuestion } = require('../controlers/geminicontroller');
 
 router.post('/generate-question', generateQuestion);
 

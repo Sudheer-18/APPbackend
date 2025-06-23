@@ -4,7 +4,9 @@ const { generateQuestion } = require('../controlers/geminicontroller');
 const { generateCodingQuestion } = require('../controlers/CodingQuesstionsController.js');
 const ProfileData = require('../controlers/ProfileController.js')
 const RegisterData = require("../controlers/RegisterController.js")
+const { SolveeQuestion } = require('../Model/SolveQuestions.js');   
 
+router.post('/solvequestion', SolveeQuestion);
 router.post('/generatecodingquestion', generateCodingQuestion);
 router.post('/generate-question', generateQuestion);
 router.post('/registerdata',RegisterData.RegisterData);
